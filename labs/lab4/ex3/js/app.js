@@ -1,9 +1,27 @@
-let dObj = { x:200, y:0, velocityY:2 }
+let colors = ["#fdaeae", "#f6e2b3", "#b49982"]
+// let dvRandom = document.getElementById("random");
 
-let gravity = .2;
+function setup() {
+    createCanvas(400, 400);
+    background(255, 254, 242);
+}
 
 function draw() {
-    background(0);
-    circle(dObj.x, dObj.y, 20);dObj.y += dObj.velocityY;
-    dObj.velocityY += gravity;
+} // Empty draw() keeps the program running
+
+function mousePressed() {
+    for( var i = 0; i < colors.length; i ++){
+        // let random = iceColors[Math.floor(Math.random() * random.length)];
+        // dvRandom.innerHTML = random;
+        
+        // draw rect each time mouse is pressed
+        rect(mouseX, mouseY, 33, 33);  
+        // var randColor = Math.random(iceColors);
+        // fill(randColor);
+        
+        // fill each rect with the color indexed/selected
+        fill(colors[0]);
+        console.log(colors); 
+    }
+    
 }
