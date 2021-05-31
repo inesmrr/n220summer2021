@@ -12,10 +12,15 @@ function multiply() {
     for(var i = 0; i < 100; i++) {
         // create div
         let divBlock = document.createElement("div");
-        var randColor = Math.random() * 255;
+
+        // random color generator
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        let color = "rgb(" + r + "," + g + "," + b + ")";
 
         // style div
-        divBlock.style.backgroundColor = randColor;
+        divBlock.style.backgroundColor = color;
         divBlock.style.width = size + "px";
         divBlock.style.height = size + "px"; 
         divBlock.style.float = "left";
@@ -28,15 +33,3 @@ function multiply() {
     }     
 }
 
-// function create(){
-//     for(var i = 0; i < 3; i++) {
-//         var size = 100;
-//         var divBlock = document.createElement("div");
-//         divBlock.style.backgroundColor="#42f54b";
-//         divBlock.style.width = size + "px";
-//         divBlock.style.height = size + "px";
-//         document.body.appendChild(divBlock); 
-        
-//         console.log(divBlock);
-//     }
-// }
