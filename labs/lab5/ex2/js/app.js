@@ -11,7 +11,8 @@ function multiply() {
     // loop to create 100 divs
     for(var i = 0; i < 100; i++) {
         // create div
-        let divBlock = document.createElement("div");
+        let divBlock = document.createElement("div")
+        ;
 
         // random color generator
         let r = Math.floor(Math.random() * 255);
