@@ -1,0 +1,90 @@
+/* selects all elements that are on the page. This resets all margins and padding on a page. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 16px;
+}
+
+.memory-game {
+    height: 100%;
+    background-color: #F6E8EA;
+
+    /* turning effect */
+    perspective: 1000px;
+}
+
+.memory-game h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #312F2F;
+}
+
+.row {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.card {
+    /* box style */
+    cursor: pointer;
+    padding-top: 5px;
+    height: 110px;
+    width: 110px;
+    background-color: #22181C;
+    border-radius: 5px;
+    /* type style */
+    font-size: 0px;
+    color: white;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    /* turning effect */
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card.flip {
+    background-color: #EF626C;
+    /* transform: rotateY(360deg);  */
+    /* makes type visible  */
+    -webkit-backface-visibility: visible ;
+	backface-visibility: visible ;
+    font-size: 33px;
+}
+
+/* .card.unflip{
+    background-color: #22181C;
+    font-size: 0px;
+} */
+
+/* button style */
+button {
+    cursor: pointer;
+    margin-left: 45%;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #84DCCF;
+    padding: 2px 2px 2px 5px;
+    margin-top: 30px;
+}
+
